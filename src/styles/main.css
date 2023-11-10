@@ -64,7 +64,7 @@ h2 {
     align-items: center;
     justify-content: center;
 
-    position: relative;
+    /* position: relative; */
 
     background-color: #fff;
     height: 100px;
