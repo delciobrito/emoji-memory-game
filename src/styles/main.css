@@ -5,6 +5,9 @@ body {
     
     background-color: #fc1e8a;
     height: 100vh;
+
+    /* para não conseguir selecionar */
+    user-select: none;
 }
 
 .container {
@@ -70,4 +73,26 @@ h2 {
     font-size: 3em;
     height: 100px;
     width: 100px;
+
+    transform: rotateY(180deg);
+    transition: .150s;
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #404040;
+    transition: .25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    opacity: .85;
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after {
+    transform: rotateY(180deg);
 }
