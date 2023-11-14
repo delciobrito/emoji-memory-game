@@ -32,12 +32,25 @@ function handleclick() {
     if(openCards.length < 2) {
         this.classList.add("boxOpen")
         openCards.push(this)
-        console.log(openCards)
     }
 
-    if(openCards == 2) {
-        setTimeout(checkMath, 900)
+    if(openCards.length == 2) {
+        setTimeout(checkMath, 500)
     }
 }
 
-function checkMath() {}
+function checkMath() {
+    if(openCards[0].innerHTML === openCards[1].innerHTML) {
+        openCards[0].classList.add("boxMath")
+        openCards[1].classList.add("boxMath")
+    } else {
+        openCards[0].classList.remove("boxOpen")
+        openCards[1].classList.remove("boxOpen")
+    }
+
+    openCards = []
+
+    if(document.querySelectorAll(".boxMath").length === emojis.length) {
+        alert("Você venceu!")
+    }
+}
