@@ -44,7 +44,7 @@ h2 {
 
 .reset:focus {
     background-color: #faebd7;
-    transform: scale(.98);
+    transform: scale(.995);
 }
 
 .game {
@@ -67,6 +67,7 @@ h2 {
     /* position: relative; */
 
     background-color: #fff;
+    font-size: 3em;
     height: 100px;
     width: 100px;
 }
